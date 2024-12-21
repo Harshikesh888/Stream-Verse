@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .menu-button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 24px;
+            width: 30px;
+        }
+
+        .menu-button div {
+            height: 4px;
+            width: 100%;
+            background: white;
+            border-radius: 2px;
+        }
+
+        .menu {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 50px;
+            left: 10px;
+            background: #444;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            margin: 5px 0;
+            font-size: 1rem;
+        }
+
+        .menu a:hover {
+            text-decoration: underline;
+        }
+
+        .menu .login {
+            margin-top: 10px;
+            background: #555;
+            padding: 8px 10px;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .menu.show {
+            display: flex;
+        }
+
+        .hero {
+            background: url('https://via.placeholder.com/1500x600') no-repeat center center/cover;
+            height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .services {
+            display: flex;
+            gap: 20px;
+        }
+
+        .service {
+            flex: 1;
+            background: #f4f4f4;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .service h2 {
+            margin: 0 0 10px 0;
+        }
+
+        .media-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            background: #f9f9f9;
+        }
+
+        .media-item {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .media-item h3 {
+            margin: 10px 0;
+            font-size: 1.2rem;
+        }
+
+        .media-item a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 12px;
+            background: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .media-item a:hover {
+            background: #0056b3;
+        }
+
+        .map-section {
+            text-align: center;
+            padding: 20px;
+            background: #f4f4f4;
+        }
+
+        .map-section a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .map-section a:hover {
+            background: #0056b3;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #00f;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('show');
+        }
+    </script>
+</head>
+<body>
+<header>
+    <button class="menu-button" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </button>
+    <div class="menu">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+        <div class="login">
+            <a href="#">Login</a>
+        </div>
+    </div>
+    <div class="logo">My Website</div>
+</header>
+
+<div class="hero">
+    <div>
+        <h1>Welcome to Our Professional Website</h1>
+        <p>Your success is our mission</p>
+    </div>
+</div>
+
+<div class="container">
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="service">
+            <h2><a href="service1.html">Service 1</a></h2>
+            <p>High-quality service description goes here.</p>
+        </div>
+        <div class="service">
+            <h2><a href="service2.html">Service 2</a></h2>
+            <p>Reliable and efficient service description goes here.</p>
+        </div>
+        <div class="service">
+            <h2><a href="service3.html">Service 3</a></h2>
+            <p>Innovative solutions for your needs.</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="media-gallery">
+    <div class="media-item">
+        <h3>Photo Gallery</h3>
+        <a href="#">View More</a>
+    </div>
+    <div class="media-item">
+        <h3>Video Gallery</h3>
+        <a href="#">View More</a>
+    </div>
+    <div class="media-item">
+        <h3>News/Media Gallery</h3>
+        <a href="#">View More</a>
+    </div>
+    <div class="media-item">
+        <h3>Event Gallery</h3>
+        <a href="#">View More</a>
+    </div>
+</div>
+
+<div class="map-section">
+    <h2>View Us in Maps</h2>
+    <a href="https://www.google.com/maps?q=D.F.36,+near+IDBI+Bank+ATM,+Vijay+Nagar,+Scheme+No+74,+Indore,+Madhya+Pradesh+452011" target="_blank">Open in Google Maps</a>
+</div>
+
+<footer>
+    <p>&copy; 2024 My Website. All Rights Reserved. <a href="#">Privacy Policy</a></p>
+</footer>
+</body>
+</html>
